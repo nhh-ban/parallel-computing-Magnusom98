@@ -48,6 +48,16 @@ for(i in 1:nrow(df)){
       sig=.05) 
 } 
 
+##Comment on findings
+
+# After running the timer.r script, I found that the "MTweedieTests Parallel" method was the fastest,
+# completing the task in 27.28. This improvement in speed can be attributed to the parallelization
+# of the M simulations in the MTweedieTests function, allowing the workload to be distributed across 
+# multiple cores. This approach is more efficient than parallelizing the final loop since the
+# MTweedieTests function involves a larger number of independent simulations, providing more opportunities
+# for performance gains through parallel computing. The original script, without any parallelization,
+# was the slowest, highlighting the benefits of leveraging parallel computing in R for computationally
+# intensive tasks.
 
 
 
